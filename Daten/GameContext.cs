@@ -11,7 +11,7 @@ namespace gameapplication.Daten
     {
         public GameContext(DbContextOptions<GameContext> options) : base(options)
         {
-            string test = null;
+           
             
         }
         public DbSet<Game> Games { get; set; }

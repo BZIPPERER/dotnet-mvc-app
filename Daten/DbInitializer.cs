@@ -1,7 +1,7 @@
 using gameapplication.Models;
 using gameapplication.Daten;
 
-namespace gameapplication
+namespace gameapplication.Daten
 {
     public class DbInitializer
     {

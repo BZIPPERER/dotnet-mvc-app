@@ -18,10 +18,26 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpGet]
+    public ViewResult Form()
+    { 
+        return View();
+    }
+
+    
+    [HttpPost]
+    public ViewResult formal()
+    { 
+        return View();
+    }
+
+
     public IActionResult Privacy()
     {
         return View();
     }
+
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

@@ -17,7 +17,7 @@ public class Startup
     { 
         //Neu
          services.AddDbContext<GameContext>(options =>
-         options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+         options.UseSqlServer(Configuration.GetConnectionString("Mason")));
          services.AddMvc();
     }
  

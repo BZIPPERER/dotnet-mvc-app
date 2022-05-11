@@ -1,3 +1,7 @@
+using gameapplication.Daten;
+using Microsoft.Data.SqlClient;
+using Microsoft.Data.Sql;
+using Microsoft.EntityFrameworkCore;
 namespace gameapplication.Models
 {
 public class Startup
@@ -11,8 +15,10 @@ public class Startup
  
     public virtual void ConfigureServices(IServiceCollection services)
     { 
-        // Configure services
-        // Configure dependency injection
+        //Neu
+         services.AddDbContext<GameContext>(options =>
+         options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+         services.AddMvc();
     }
  
     public virtual void Configure(IApplicationBuilder app, IWebHostEnvironment env, 

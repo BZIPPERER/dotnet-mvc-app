@@ -9,5 +9,8 @@ namespace gameapplication.Models
         [ StringLength(14,MinimumLength = 3)] //" BEN" "Ben"
         public string? Name { get; set; }
         public string? Email { get; set; }
+
+        // string property in model class
+public string ExperienceLevel { get; set; }
     }
 }

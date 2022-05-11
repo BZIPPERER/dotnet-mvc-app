@@ -1,4 +1,5 @@
-@model gameapplication.Models.formClass
+ 
+@model gameapplication.Models.AccountViewModel
 @{
     Layout = null;
 }
@@ -30,13 +31,19 @@
 
         <form asp-action="formal" method="post">
             <div  class="myforma">
-                <label asp-for="Name" class="" >Ihr Name ::</label>
-                <input asp-for="Name" />
+                <label asp-for="Account.Name" class="" >Ihr Name ::</label>
+                <input asp-for="Account.Name" />
             </div>
             <div class="myforma">
+                <!--
                 <label asp-for="Email">         Ihre EMail::</label>
-                <input asp-for="Email" />
+                <input asp-for="Email" />-->
             </div>
+            <!-- Unterboden Kreise -->
+                <label><input asp-for="ExperienceLevel" value="N" type="radio" />Novice</label> 
+                <label><input asp-for="ExperienceLevel" value="B" type="radio"/>Beginner</label> 
+                <label><input asp-for="ExperienceLevel" value="I" type="radio" />Intermediate</label> 
+                <label><input asp-for="ExperienceLevel" value="A" type="radio"/>Advanced</label>
             <div>
                <p></p>
             <button type="submit">Ausdruck</button>

@@ -1,4 +1,13 @@
 @model gameapplication.Models.AccountViewModel
-<h1>Je suis HTML</h1>
+@{
+    // NRB 
+}
+<h1>Vielen Dank f&uuml;r Ihre &uuml;bermittelten Daten</h1>
 
+
+<p>Datum heute: 
+    14/@ViewBag.MesAgora/@ViewBag.MesCherri 
+</p>
+<p>Name:  @ViewBag.Str1 </p> 
+<p>Email: @ViewBag.Str2</p>
 <input text asp-for="Account.Name" />

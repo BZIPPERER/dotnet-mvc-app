@@ -16,7 +16,7 @@ namespace gameapplication.Models
 
         //public SelectList Roles { get; set; }
         // string property in model class
-public string ExperienceLevel { get; set; }
+        public string ExperienceLevel { get; set; }
     }
 
 }

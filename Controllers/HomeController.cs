@@ -24,13 +24,24 @@ public class HomeController : Controller
         return View();
     }
 
-    
+    // Execute on Form posting 
     [HttpPost]
-    public ViewResult formal()
+    public ViewResult formal([FromForm] string location, [FromForm] string email)
     { 
+        //simple data assignment to ViewBag 
+        int mMonth =  DateTime.Now.Month;
+        int mDays  = DateTime.Now.Day;
+        int mYear  = DateTime.Now.Year;
+        
+        ViewBag.MesAgora = mMonth;
+        ViewBag.MesCulpa = mDays;
+        ViewBag.MesCherri = mYear;
+
+        ViewBag.Str1 = location;
+        ViewBag.Str2 = email;
         return View();
     }
-
+// Nach Art von https://makolyte.com/aspdotnet-core-get-posted-form-data-in-an-api-controller/
 
     public IActionResult Privacy()
     {

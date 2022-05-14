@@ -1,4 +1,4 @@
- 
+<!-- And dont forgt the soap --> 
 @model gameapplication.Models.AccountViewModel
 @{
     Layout = null;
@@ -8,45 +8,71 @@
 <head>
  <style>
 .myform{
+    padding-left: 55px;
   border: 2px outset black;
   background-color: white  ;
-  text-align: center;
-  font-family: Arial;
-  
+  margin-left:33%;
+  text-align: left;
+  font-family: arial; /*wait to terminate*/
+  color: black;
 }
 
 .myforma {
   font-size: large;
 }
-
-
-
 </style>
     <meta name="viewport" content="width=device-width" />
-    <title>Form</title>
+    <title>Testformular</title>
 </head>
 <body>
     <div class="myform" >
-            <h1 class="display-4">Daten Austausch Formular</h1>
+            <h1 class="display-4">Anlegen Neuer Nutzer
+            </h1>
 
         <form asp-action="formal" method="post">
+            <table>
+            <tr>
             <div  class="myforma">
-                <label asp-for="Account.Name" class="" >Ihr Name ::</label>
-                <input asp-for="Account.Name" />
+                <td><label asp-for="Account.Name" class="" >Ihr Name</label>
+                </td>
+                <td><input asp-for="Account.Name"  name="Location"/>
+                </td>
             </div>
+            </tr>
+            <tr>
             <div class="myforma">
-                <!--
-                <label asp-for="Email">         Ihre EMail::</label>
-                <input asp-for="Email" />-->
+            <!--same workflow -->
+                <td>
+                <label asp-for="Account.Email" class="">Ihre EMail</label>
+                </td>
+                <td>
+                <input asp-for="Account.Email" name="Email" />
+                </td>
             </div>
+            </tr>
+            <!--
+            <div class="myforma">
+            
+                <label asp-for="Account.EmployeeNumber" class="">Personalnummer (3-stellig)</label>
+                <input asp-for="Account.EmployeeNumber" name="EmployeeNumber" />
+            </div>
+            -->
+            </table>
+            <br></br>
+            <br></br>
             <!-- Unterboden Kreise -->
-                <label><input asp-for="ExperienceLevel" value="N" type="radio" />Novice</label> 
-                <label><input asp-for="ExperienceLevel" value="B" type="radio"/>Beginner</label> 
-                <label><input asp-for="ExperienceLevel" value="I" type="radio" />Intermediate</label> 
-                <label><input asp-for="ExperienceLevel" value="A" type="radio"/>Advanced</label>
+            <b>Art Nutzer:</b>
+            <p>
+                <label><input asp-for="ExperienceLevel" value="N" type="radio" />Admin (CRUD Ability)</label> 
+            </p><p>   
+                <label><input asp-for="ExperienceLevel" value="B" type="radio"/>Normaler User (lesend)</label> 
+            </p><p>    
+                <label><input asp-for="ExperienceLevel" value="I" type="radio" />Technische Redaktion (lesend/schreibend)
+                </label> 
+            </p>
             <div>
                <p></p>
-            <button type="submit">Ausdruck</button>
+            <button type="submit" style="font-size:18px">Daten senden</button>
              <p></p>
         </div>
 

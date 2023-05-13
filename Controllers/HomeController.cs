@@ -44,7 +44,7 @@ public class HomeController : Controller
                         TempData["Message"] = "Logged In";
                         Console.WriteLine(username);
                         Console.WriteLine(experience);
-                        return RedirectToAction(nameof(Login));
+                        return View ( );
                     }
                 }
             }

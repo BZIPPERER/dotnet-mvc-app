@@ -27,11 +27,11 @@
 </head>
 <body>
     <div class="myform" >
-            <h1 class="display-4">Daten Austausch Formular</h1>
+            <h1 class="display-4">Wie sind Ihre Gaming Erfahrungen?</h1>
 
         <form asp-action="formal" method="post">
             <div  class="myforma">
-                <label asp-for="Account.Name" class="" >Ihr Name ::</label>
+                <label asp-for="Account.Name" class="" >Ihr Name:</label>
                 <input asp-for="Account.Name" />
             </div>
             <div class="myforma">
@@ -39,14 +39,14 @@
                 <label asp-for="Email">         Ihre EMail::</label>
                 <input asp-for="Email" />-->
             </div>
-            <!-- Unterboden Kreise -->
-                <label><input asp-for="ExperienceLevel" value="N" type="radio" />Novice</label> 
+            <!-- -->
+                <label><input asp-for="ExperienceLevel" value="N" type="radio" />Anf&auml;nger</label> 
                 <label><input asp-for="ExperienceLevel" value="B" type="radio"/>Beginner</label> 
                 <label><input asp-for="ExperienceLevel" value="I" type="radio" />Intermediate</label> 
-                <label><input asp-for="ExperienceLevel" value="A" type="radio"/>Advanced</label>
+                <label><input asp-for="ExperienceLevel" value="A" type="radio"/>Fortgeschritten</label>
             <div>
                <p></p>
-            <button type="submit">Ausdruck</button>
+            <button type="submit">Starten</button>
              <p></p>
         </div>
 

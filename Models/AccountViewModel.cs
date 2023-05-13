@@ -1,11 +1,12 @@
-    // Rampe
-    using gameapplication.Models;
+    // Erste Aenderung
+using gameapplication.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
+
+
 namespace gameapplication.Models
 {
-    // TIM ?
-
+    
 
  
     public class AccountViewModel
@@ -16,7 +17,7 @@ namespace gameapplication.Models
 
         //public SelectList Roles { get; set; }
         // string property in model class
-public string ExperienceLevel { get; set; }
+        public string ExperienceLevel { get; set; }
     }
 
 }

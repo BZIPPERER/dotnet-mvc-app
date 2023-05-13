@@ -26,9 +26,37 @@ public class HomeController : Controller
 
     
     [HttpPost]
-    public ViewResult formal()
+    public IActionResult Login(AccountViewModel asap)
     { 
-        return View();
+            
+            var username = asap.UserName;
+            var experience = asap.ExperienceLevel;
+
+            try
+            {
+                            
+                if (username != null)
+                {
+                    var SignInResult = true;
+             
+                    if (SignInResult)
+                    {
+                        TempData["Message"] = "Logged In";
+                        Console.WriteLine(username);
+                        Console.WriteLine(experience);
+                        return RedirectToAction(nameof(Login));
+                    }
+                }
+            }
+            catch (Exception)
+            {
+ 
+                TempData["Message"] = "Nutzer exisiert nicht";
+                return RedirectToAction(nameof(Login));
+            }
+ 
+            TempData["Message"] = "Login fehlgeschlagen";
+            return RedirectToAction(nameof(Login));
     }
 
 

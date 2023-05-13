@@ -27,31 +27,36 @@
 </head>
 <body>
     <div class="myform" >
-            <h1 class="display-4">Wie sind Ihre Gaming Erfahrungen?</h1>
-
+        <h3 class="display-4">Wie sind Ihre Gaming Erfahrungen?</h3>
+        
         <form asp-action="formal" method="post">
+            
             <div  class="myforma">
                 <label asp-for="Account.Name" class="" >Ihr Name:</label>
                 <input asp-for="Account.Name" />
             </div>
-            <div class="myforma">
-                <!--
-                <label asp-for="Email">         Ihre EMail::</label>
-                <input asp-for="Email" />-->
-            </div>
+          
             <!-- -->
-                <label><input asp-for="ExperienceLevel" value="N" type="radio" />Anf&auml;nger</label> 
-                <label><input asp-for="ExperienceLevel" value="B" type="radio"/>Beginner</label> 
-                <label><input asp-for="ExperienceLevel" value="I" type="radio" />Intermediate</label> 
-                <label><input asp-for="ExperienceLevel" value="A" type="radio"/>Fortgeschritten</label>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label><input  asp-for="ExperienceLevel" value="N" type="radio" />bin Anf&auml;nger
+                    </label>
+                </div>
+                <div class="col-sm-3"><label><input asp-for="ExperienceLevel" value="B" type="radio"/>bin Beginner
+                </label> 
+                </div>
+                <div class="col-sm-3"><label><input asp-for="ExperienceLevel" value="I" type="radio" />Intermediate
+                </label> 
+                </div>
+                <div class="col-sm-3"><label><input asp-for="ExperienceLevel" value="A" type="radio"/>Fortgeschritten
+                </label>
+                </div>
+                
             <div>
                <p></p>
             <button type="submit">Starten</button>
-             <p></p>
-        </div>
-
+           
         </form>
     </div>
-
 </body>
 </html>
